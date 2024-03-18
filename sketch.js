@@ -1,16 +1,16 @@
-let message = "This is random simple web page!";
+let message = "This is random simple webpage!";
 let circles = [];
 
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(windowWidth, windowHeight);
 
   // Create some colorful circles
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 20; i++) {
     circles.push(
       new Circle(
         random(width),
         random(height),
-        random(20, 50),
+        random(40, 100),
         color(random(255), random(255), random(255))
       )
     );
@@ -21,8 +21,8 @@ function draw() {
   background(220);
 
   // Display the message
-  textSize(24);
-  fill(255); // White text color
+  textSize(42);
+  fill(0); // White text color
   textAlign(CENTER, CENTER);
   text(message, width / 2, height / 2);
 
@@ -54,8 +54,8 @@ class Circle {
     this.y = y;
     this.diameter = diameter;
     this.color = color;
-    this.speedX = random(-2, 2);
-    this.speedY = random(-2, 2);
+    this.speedX = random(-3, 3);
+    this.speedY = random(-3, 3);
   }
 
   update() {
